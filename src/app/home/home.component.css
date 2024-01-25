@@ -1,0 +1,9 @@
+img{
+    height: 100%;
+    width: 100%;
+    box-sizing: content-box;
+}
+.parent{
+    height: 100%;
+    width: 100%;
+}

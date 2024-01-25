@@ -1,0 +1,52 @@
+
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: 0;
+   
+}
+.left{
+    height: 100vh;
+    width: 20vw;
+    background-color: rgb(1,58,83);
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+}
+.top{
+    height: 90%;
+    width: 100%;
+
+
+}
+.buttom{
+    height: 10%;
+    width: 100%;
+
+}
+p:hover{
+    background-color: lightgray;
+    cursor: pointer;
+    
+}
+p{
+    font-size: larger;
+}
+.right{
+    height: 100vh;
+    width: 80vw;
+    overflow: auto;
+    
+}
+button{
+    background-color: red;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    width: 80%;
+    padding: 10px;
+    color: white;
+
+
+}

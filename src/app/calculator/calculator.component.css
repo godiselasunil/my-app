@@ -1,0 +1,33 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    height: 50%;
+    width: 50%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    text-align: center;
+    border: solid;
+
+}
+
+h1{
+    padding-top: 10px;
+    
+}
+
+button{
+    height: 30px;
+    width: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color:cadetblue;
+    color: white;
+}

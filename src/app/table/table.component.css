@@ -1,0 +1,53 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+}
+.top{
+    height: auto;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+
+}
+.left{
+    height: 100%;
+    width: 65%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.left button{
+    width: fit-content;
+    margin: 3px;
+    /* display: inline-block; */
+}
+.right{
+    height: 100%;
+    width: 35%;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+
+}
+.form{
+    margin-top: 10px;
+}
+div label{
+    margin: 5px;
+}
+.buttom{
+    height: 60%;
+    width: 100%;
+    /* background-color: red; */
+
+}
+.b input:hover{
+    background-color: lightgrey;
+
+}

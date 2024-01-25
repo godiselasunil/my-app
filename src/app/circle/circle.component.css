@@ -1,0 +1,31 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.child{
+    height: 50%;
+    width: 40%;
+    background-color: antiquewhite;
+    text-align: center;
+    border-radius: 10px;
+    border: solid;
+
+}
+button{
+    height: 30px;
+    width: 100px;
+    margin: 5px;
+    background-color: darkcyan;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input{
+    height: 8%;
+    width: 60%;
+}
