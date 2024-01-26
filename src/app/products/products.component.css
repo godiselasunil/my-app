@@ -1,0 +1,8 @@
+.top{
+    height: auto;
+    width: 100%;
+    background-color: black;
+}
+.top button{
+    margin: 3px;
+}

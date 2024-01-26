@@ -19,6 +19,12 @@ import { MarksComponent } from './marks/marks.component';
 import { TableComponent } from './table/table.component';
 import { PricePipe } from './price.pipe';
 import { RatingPipe } from './rating.pipe';
+import { EventComponent } from './event/event.component';
+import { CarsComponent } from './cars/cars.component';
+import { ProductsComponent } from './products/products.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountsComponent } from './accounts/accounts.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +43,19 @@ import { RatingPipe } from './rating.pipe';
     MarksComponent,
     TableComponent,
     PricePipe,
-    RatingPipe
+    RatingPipe,
+    EventComponent,
+    CarsComponent,
+    ProductsComponent,
+    VehicleComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

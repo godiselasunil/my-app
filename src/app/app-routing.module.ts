@@ -13,6 +13,11 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MarksComponent } from './marks/marks.component';
 import { TableComponent } from './table/table.component';
+import { EventComponent } from './event/event.component';
+import { CarsComponent } from './cars/cars.component';
+import { ProductsComponent } from './products/products.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -27,7 +32,12 @@ const routes: Routes = [
     {path:'bmi',component:BmiComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'marks',component:MarksComponent},
-    {path:'table',component:TableComponent}
+    {path:'table',component:TableComponent},
+    {path:'event',component:EventComponent},
+    {path:'cars',component:CarsComponent},
+    {path:'products',component:ProductsComponent},
+    {path:'vehicle',component:VehicleComponent},
+    {path:'accounts',component:AccountsComponent}
   ]},
   {path:'', component:LoginComponent},
   {path:'**',component:PagenotfoundComponent}
