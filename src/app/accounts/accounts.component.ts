@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountsService } from '../accounts.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-accounts',
@@ -22,6 +23,15 @@ export class AccountsComponent {
       }
     )
 
+  }
+
+  delete(id:string){
+    this._accountService.deleteaccounts(id).subscribe(
+      (data:any)=>{
+        alert("deleted successfully")
+        location.reload()
+      }
+    )
   }
 
 }

@@ -1,0 +1,16 @@
+<div class="main">
+    <form [formGroup]="cratetask">
+        <h1>TO DO</h1>
+        <label for="">Task:</label>
+        <br>
+        <textarea name="" id="" cols="30" rows="5" formControlName="task"></textarea>
+        <br>
+        <label for="">Time:</label>
+        <input type="datetime-local" formControlName="time">
+        <br><br>
+        <app-todoformchild (bevent)="catch($event)"></app-todoformchild>
+
+
+    </form>
+    
+</div>

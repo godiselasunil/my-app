@@ -1,0 +1,61 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color:antiquewhite;
+    display: flex;
+   
+}
+label{
+    width: 65px;
+    margin: 5px;
+}
+.left{
+    height: 100%;
+    width: 30%;
+    /* background-color:burlywood; */
+    
+}
+.right{
+    height: 100%;
+    width: 70%;
+    /* background-color: antiquewhite; */
+    overflow: auto;
+}
+.lefttop{
+    height: 50%;
+    width: 100%;
+    /* border: solid; */
+    
+}
+.leftbuttom{
+    height: 50%;
+    width: 100%;
+    /* border: solid; */
+    /* background-color:cornflowerblue; */
+
+
+}
+.righttop{
+    height:50% ;
+    width: 100%;
+    overflow: auto;
+    /* background-color:aquamarine; */
+    
+}
+.rightmiddle{
+    height:25% ;
+    width: 100%;
+    /* background-color: beige; */
+    overflow: auto;
+}
+.rightbuttom{
+    height:25%;
+    width: 100%;
+    /* background-color: brown; */
+    overflow: auto;
+}
+.last{
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+}

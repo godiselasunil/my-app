@@ -1,0 +1,62 @@
+<div class="main">
+    <div class="top">
+        <div class="t">
+            <div>
+                <input type="text" [(ngModel)]="term" (keyup)="filter()">
+            <button (click)="filter()" style="background-color: yellow;border-radius: 3px; width: 80px;">Search</button>
+            </div>
+            <div class="section">
+                <select name="" id="" [(ngModel)]="column">
+                    <option value="name" >Name</option>
+                    <option value="city">City</option>
+        
+        
+                </select>
+                <select name="" id="" [(ngModel)]="order">
+                    <option value="asc" selected >Ascending</option>
+                    <option value="dsc">Descending</option>
+                    
+        
+                </select>
+                <button (click)="sort()" style="background-color: yellow;border-radius: 3px; width: 80px;">Sort</button>
+
+                <button routerLink="/dashboard/putschool">Add Student</button>
+            </div>
+        </div>
+    </div>
+    <div class="deatails" *ngFor="let item of school">
+        <div class="insidetop">
+            <p>{{item.name}}</p>
+
+        </div>
+        <div class="insidemiddle">
+            
+            <b><span>ID:</span> {{item.id}}</b>
+            <br>
+            <b><span>City:</span> {{item.city}}</b>
+            <br>
+            <b><span>Fee:</span> {{item.fee}} /-</b>
+            <br>
+            <b><span>Phone:</span> {{item.phone}}</b>
+            <br>
+
+            <div class="bt">
+                <button class="btn btn-info" (click)="edit(item.id)">Edit</button>
+                <button class="btn btn-danger" (click)="delete(item.id)">Delete</button>
+            </div>
+
+            
+
+        </div>
+        <div class="insidebuttom">
+
+        </div>
+        <div class="image">
+            <img src="{{item.image}}" alt="" height="100%" width="100%">
+
+
+        </div>
+        
+    </div>
+</div>
+  

@@ -1,0 +1,18 @@
+<div class="main">
+
+    <div class="product" *ngFor="let flipkart of flipkarts">
+
+        <div >
+            <img src="{{flipkart.image}}" alt="" height="120px" width="100%">
+            <br>
+            <b>{{flipkart.title }}</b>
+            <br>
+            <p>{{flipkart.price}} <del>666 </del> <span style="color: red ;"> 70% Off</span> </p>
+            <p>{{flipkart.rating.rate}} ★  <img height="20px" width="110px" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt=""></p>
+            <p>{{flipkart.category}} </p>
+            <div class="description">
+                {{flipkart.description}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="parent" [formGroup]="detailsform">
+    <div class="first">
+
+    </div>
+    <div class="left">
+        <div class="lefttop">
+            <label for="">Name</label>
+            <input type="text" formControlName="name">
+            <br>
+            <label for="">Price</label>
+            <input type="number" formControlName="price">
+            <br>
+            <label for="">Model</label>
+            <input type="text" formControlName="model">
+            <br>
+            <label for="">Free Delivery</label>
+            <input type="radio" value="true" formControlName="freedelivery">
+            <label for="">Yes</label>
+            <input type="radio" value="false" formControlName="freedelivery">
+            <label for="">No</label>
+            <br>
+            <label for="">Image</label>
+            <input type="text" formControlName="image">
+            <br>
+            <div formGroupName="warrenty">
+
+                <label for="">Eligible</label>
+                <input type="radio" value="true" formControlName="eligible">
+                <label for="">Yes</label>
+                <input type="radio" value="false" formControlName="eligible">
+                <label for="">No</label>
+                <label for="">Warrenty</label><br>
+                <label for="">Months</label>
+                <input type="number">
+            </div>
+
+        </div>
+
+        <div class="leftbuttom" formGroupName="ratings">
+            <h4>Rating Info</h4>
+            <label for="">One</label>
+            <input type="number" formControlName="one">
+            <br>
+            <label for="">Two</label>
+            <input type="number" formControlName="two">
+            <br>
+            <label for="">Three</label>
+            <input type="number" formControlName="three">
+            <br>
+            <label for="">Four</label>
+            <input type="number" formControlName="four">
+            <br>
+            <label for="">Five</label>
+            <input type="number" formControlName="five">
+            <br>
+
+
+
+
+        </div>
+
+
+    </div>
+    <div class="right">
+        <div class="righttop" formArrayName="seller">
+            <button (click)="addseller()">Add Seller</button>
+           
+            <div *ngFor="let seller of sellerFormArray.controls;let i = index">
+               
+                <div formGroupName="{{i}}">
+                    <h4>Seller{{i+1}}</h4>
+                    <label for="">Name</label>
+                    <input type="text" formControlName="name">
+                    <br>
+                    <div formGroupName="adress">
+                    <p>Adress:</p>
+                    <label for="">Line1</label>
+                    <input type="number" formControlName="line1">
+                    <br>
+                    <label for="">Area</label>
+                    <input type="text"formControlName="area">
+                    <br>
+                    <label for="">City</label>
+                    <input type="text" formControlName="city">
+                    <br>
+                    <label for="">Pincode</label>
+                    <input type="number" formControlName="pincode">
+                    <br>
+                    </div>
+                    <button (click)="delete(i)">Delete</button>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="rightmiddle" formArrayName="comment">
+            <button (click)="addcomment()">Add Comments</button>
+
+            <div *ngFor="let comment of commentFormArray.controls;let i = index">
+                <div formGroupName="{{i}}">
+                    <p>Comment{{i+1}}</p>
+                    <label for="">Time</label>
+                    <input type="datetime-local" formControlName="time">
+                    <br>
+                    <label for="">Message</label>
+                    <input type="text" formControlName="message">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="rightbuttom" >
+
+            <label for="">Product Type</label>
+            <br>
+            <input type="radio" name="producttype" formControlName="producttype" value="furniture">
+            <label for="">Furniture</label>
+            <input type="radio" name="producttype" formControlName="producttype" value="nonfurniture">
+            <label for="">Non-Furniture</label>
+            <div *ngIf="detailsform.get('producttype')?.value== 'furniture'  ">
+                <label for="">Height</label>
+                <input type="number"  formControlName="height">
+                <br>
+                <label for="">Width</label>
+                <input type="number" formControlName="width" >
+            </div>
+            <div *ngIf="detailsform.get('producttype')?.value== 'nonfurniture'  ">
+                <label for="">weight</label>
+                <input type="number" formControlName="weight">
+
+            </div>
+            <div class="last">
+                
+            <button (click)="createProduct()">{{id ? 'Update Product':'Create Product'}}</button>
+
+            </div>
+        </div>
+
+    </div>
+   
+    
+
+</div>

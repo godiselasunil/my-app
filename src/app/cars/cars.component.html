@@ -1,15 +1,15 @@
 <div class="main">
     <h1>Cars</h1>
     <br><br>
-    <label for="">Skoda</label>
-    <input type="radio" name="Cars">
+    <label for="" >Skoda</label  >
+    <input type="radio" name="Cars" [(ngModel)]="radio" value="skoda">
     <label for=""> BMW</label>
-    <input type="radio" name="Cars">
+    <input type="radio" name="Cars" [(ngModel)]="radio" value="BMW">
     <label for="">Audi</label>
-    <input type="radio" name="Cars">
+    <input type="radio" name="Cars" [(ngModel)]="radio" value="audi">
     <br><br>
     
-    <img height="100px" width="100px" src="./../../assets/skoda.jpg" alt="">
-    <img height="100px" width="100px" src="./../../assets/bmw.jpg" alt="">
-    <img height="100px" width="100px" src="./../../assets/audi.jpg" alt="">
+    <img   *ngIf="radio== 'skoda'  "  height="400px" width="700px" src="./../../assets/skoda.jpg" alt="" >
+    <img   *ngIf="radio== 'BMW'  "  height="400px" width="700px" src="./../../assets/bmw.jpg" alt="">
+    <img  *ngIf="radio== 'audi'  " height="400px" width="700px" src="./../../assets/audi.jpg" alt="">
 </div>

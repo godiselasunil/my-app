@@ -1,0 +1,13 @@
+<div class="main">
+    <div class="child" *ngFor="let product of products; ">
+        <img src="{{product.image}}" height="180px" width="180px" alt="">
+        <p><span>Product Name:</span>{{product.name}}</p>
+        <p><span>Price:</span>{{product.price}}</p>
+        <p><span>Model:</span>{{product.model}}</p>
+        <p><span>Free Delivery</span>{{product.freedelivery}}</p>
+        <button class="btn btn-warning" (click)="edit(product.id)">Edit</button>
+        <button>Seller</button>
+        <button (click)="delete(product.id)" class="btn btn-danger">Delete</button>
+        
+    </div>
+   

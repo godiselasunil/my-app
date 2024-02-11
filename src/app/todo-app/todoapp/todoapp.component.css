@@ -1,0 +1,30 @@
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child1{
+    height: 70%;
+    width: 30%;
+    background-color: antiquewhite;
+    margin: 5px;
+    box-shadow: 0px opx 5px grey;
+    
+}
+.child2{
+    height: 70%;
+    width: 30%;
+    background-color: antiquewhite;
+    margin: 5px;
+    box-shadow: 0px opx 5px grey;
+}
+.child3{
+    height: 70%;
+    width: 30%;
+    background-color: antiquewhite;
+    margin: 5px;
+    box-shadow: 0px opx 5px black;
+}

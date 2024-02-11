@@ -1,0 +1,91 @@
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: darkviolet;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.top{
+    height: 10%;
+    width: 100%;
+    background-color: brown;
+}
+.t{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    /* margin: 10px; */
+}
+.section{
+    margin-left: 20px;
+}
+.deatails{
+    height: 200px;
+    width: 320px;
+    /* background-color: antiquewhite; */
+    margin: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid antiquewhite;
+    /* border-top-right-radius: 0.5em 1em; */
+    
+}
+.insidetop{
+    height: 25%;
+    width: 100%;
+    background-color: antiquewhite;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid white;
+    
+    
+}
+.insidemiddle{
+    height: 75%;
+    width: 100%;
+    background-color: white;
+    
+
+}
+
+.insidebuttom{
+    height: 5%;
+    width: 100%;
+    background-color:red;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid red;
+}
+.image{
+    height: 100px;
+    width: 100px;
+    /* background-color: red; */
+    border-radius: 10px;
+    border: 2px solid chocolate;
+    position: absolute;
+    bottom: 80px;
+    left: 200px;
+}
+.insidetop p{
+    font-size: x-large;
+    font-weight: 500;
+    margin-top:5px ;
+    margin-left:12px ;
+}
+
+
+
+span{
+    color: crimson;
+}
+.bt{
+    display: flex;
+    justify-content: right;
+}
+.bt button{
+    margin-right: 30px;
+}

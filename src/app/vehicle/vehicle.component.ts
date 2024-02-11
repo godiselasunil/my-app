@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicle',
@@ -8,17 +9,79 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehicleComponent {
 
-  public vehicle:any  = [];
+  public vehicles:any  = [];
 
-  constructor(private _vehicleService:VehicleService){
-    _vehicleService.getVehicle().subscribe(
+  public term:string = "";
+
+  public column:string = ""
+  public order:string = "";
+
+  public page:number = 0;
+
+  constructor(private _vehicleService:VehicleService,private _router:Router){
+    _vehicleService.getVehicles().subscribe(
       (data:any)=>{
-        this.vehicle = data;
+        this.vehicles = data;
       },
       (err:any)=>{
         alert("internal server error")
       }
     )
+
+  }
+
+  filter(){
+    this._vehicleService.getFilterdVehicle(this.term).subscribe(
+      (data:any)=>{
+
+        this.vehicles = data;
+      },
+      (err:any)=>{
+        alert("internal server error")
+      }
+    )
+  }
+  sort(){
+    this._vehicleService.getSortedVehicle(this.column,this.order).subscribe(
+      (data:any)=>{
+        this.vehicles = data;
+
+      },
+      (data:any)=>{
+        alert("internal server error")
+
+      }
+    )
+  }
+
+  pagenation(){
+    this._vehicleService.getPageVehicle(this.page).subscribe(
+
+      (data:any)=>{
+        this.vehicles = data;
+
+      },
+      (data:any)=>{
+        alert("internal server error")
+
+      }
+    )
+  }
+  delete(id:string){
+    this._vehicleService.deleteVehicle(id).subscribe(
+      (data:any)=>{
+        alert( data.Vehicle+"deleted successfully")
+        location.reload();
+
+      },
+      (data:any)=>{
+        alert("internal error")
+      }
+    )
+
+  }
+  edit(id:string){
+    this._router.navigateByUrl("/dashboard/edit-vehicle/"+id);
 
   }
 

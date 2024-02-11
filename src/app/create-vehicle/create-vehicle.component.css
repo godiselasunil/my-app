@@ -1,0 +1,31 @@
+.main{
+    height: 100%;
+    width: 100%;
+    /* background-color: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    height: 80%;
+    width: 60%;
+    background-color: antiquewhite;
+    /* text-align: center; */
+    border-radius: 10px;
+    border: 2px;
+}
+label{
+    width: 150px;
+    margin: 10px;
+    font-size: x-large;
+    text-transform: capitalize;
+}
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    display: flex;
+    justify-content: right;
+}

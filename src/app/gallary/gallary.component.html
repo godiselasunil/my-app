@@ -1,0 +1,12 @@
+<div class="main">
+    <div class="gallary" *ngFor="let gallary of Gallarys.data.memes">
+        <div>
+            <p>{{gallary.name}}</p>
+            <img src="{{gallary.url}}" alt="" height="{{gallary.height}}" width="{{gallary.width}}">
+            <br>
+            <p>{{gallary.box_count}}</p>
+            <p>{{gallary.captions}}</p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    
+    
+}
+.activity{
+    height: 40%;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activity p{
+    /* font-size: 50px; */
+    /* background-color: yellow; */
+    /* border: 2px solid; */
+    color: red;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btnn{
+    /* text-align: center; */
+    margin-left: 500px;
+}

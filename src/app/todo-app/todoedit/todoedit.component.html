@@ -1,0 +1,10 @@
+<div >
+    <div *ngFor="let res of resulArray;let i = index" class="main">
+        <p><span style="color: red;">Task:</span>  {{res.task.slice(0,18)}}...</p>
+        <p><span style="color: red;">Task:</span>  {{res.time}}</p>
+
+        <button class="btn btn-primary" (click)="view(res)">view</button>
+        <button class="btn btn-info" (click)="edit(res)">Edit</button>
+        <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+    </div>
+</div>

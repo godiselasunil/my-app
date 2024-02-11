@@ -1,0 +1,16 @@
+<p>parent works!</p>
+
+<input type="text" [(ngModel)]="ap">
+<br>
+<p>BP:{{bp}}</p>
+
+
+<app-child [ac]="ap" (bEvent)="catch($event)"></app-child>
+<br>
+<input type="number" [(ngModel)]="rt" placeholder="enter rating">
+
+<app-rating [rating]="rt"></app-rating>
+
+
+
+

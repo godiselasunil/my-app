@@ -1,0 +1,54 @@
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.child{
+    height: 400px;
+    width: 300px;
+    background-color: antiquewhite;
+    margin: 10px;
+    position: relative;
+}
+.name{
+    height: 10%;
+    width: 100%;
+    background-color: brown;
+    color: white;
+    font-size: x-large;
+
+}
+.details{
+    height: 50%;
+    width: 100%;
+    /* background-color: brown; */
+    /* margin-top: 15px; */
+
+}
+.biography{
+    height: 30%;
+    width: 100%;
+    background-color: aqua;
+
+}
+.buttons{
+    height: 10%;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-around;
+
+}
+.image{
+    position: absolute;
+    top: 50px;
+    left: 165px;
+}
+.child .details p{
+    margin:0 !important;
+    /* margin-top: 13px; */
+}
+span{
+    color: red;
+}

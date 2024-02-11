@@ -1,0 +1,18 @@
+.main{
+    height: auto;
+    width: 100%;
+}
+.mails{
+    height: 30%;
+    width: 100%;
+    /* border: 1px solid grey; */
+    border-color: inherit;
+    padding-top: 10px;
+    /* margin-left: 20px; */
+}
+.mails:hover{
+    background-color:white;
+    cursor: pointer;
+    border:1px solid grey;
+    box-shadow:1px 1px 1px ;
+}

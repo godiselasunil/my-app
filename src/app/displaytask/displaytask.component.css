@@ -1,0 +1,15 @@
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.child{
+    height: 400px;
+    width: 250px;
+    background-color: aqua;
+    margin: 10px;
+    text-align: center;
+    /* margin: 0; */
+
+}

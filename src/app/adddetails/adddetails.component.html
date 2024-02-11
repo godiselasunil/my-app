@@ -1,0 +1,16 @@
+<div class="main" >
+    <div class="child" >
+       <form  [formGroup]="detailsForm">
+        <label for="">Name:</label>
+        <input type="text" formControlName="name">
+        <br>
+        <label for="">CITY:</label>
+        <input type="text" formControlName="city">
+        <br>
+        <label for="">Fee:</label>
+        <input type="number" formControlName="fee">
+        <br>
+        <button (click)="submit()">Submit</button>
+       </form>
+    </div>
+</div>

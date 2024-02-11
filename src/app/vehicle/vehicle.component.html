@@ -1,3 +1,31 @@
+
+  <input type="text" [(ngModel)]="term" ((keyup))="filter()">
+  <button (click)="filter()" class="btn btn-danger">Search</button>
+
+  <select name="" id="" [(ngModel)]="column">
+    <option>color</option>
+    <option value="fuel">FUEL</option>
+  </select>
+  <select name="" id="" [(ngModel)]="order">
+    <option value="asc">Asscending</option>
+    <option value="dec">Descending</option>
+  </select>
+
+  <button (click)="sort()">Sort</button>
+  <label for="">select page</label>
+
+  <select name="" id="" [(ngModel)]="page" (change)="pagenation()" >
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option >6</option>
+  </select>
+
+
+  <button routerLink="/dashboard/create-vehicle">Add Vehicle</button>
+
 <table class="table table-dark table-striped">
     <thead>
         <tr>
@@ -7,18 +35,24 @@
             <th>Model</th>
             <th>Type</th>
             <th>Color</th>
+            <th>Action</th>
             <th>Image</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let vehicl of vehicle">
-            <td>{{vehicl.id}}</td>
-            <td>{{vehicl.Vehicle}}</td>
-            <td>{{vehicl.manufacturer}}</td>
-            <td>{{vehicl.model}}</td>
-            <td>{{vehicl.type}}</td>
-            <td>{{vehicl.color}}</td>
-            <td><img height="100px" width="100px" src="{{vehicl.image}}" alt=""></td>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.id}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.color}}</td>
+            <td><button btn class="btn btn-info" (click)="edit(vehicle.id)">Edit</button></td>
+            <td><img height="100px" width="100px" src="{{vehicle.image}}" alt=""></td>
+            <td><button btn class="btn btn-danger" (click)="delete(vehicle.id)">Delete</button></td>
+         
+            
         </tr>
     </tbody>
 </table>

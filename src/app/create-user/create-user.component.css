@@ -1,0 +1,13 @@
+label{
+    width: 120px;
+    margin: 10px;
+}
+.maim{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    overflow: auto;
+}
+.error{
+    color: red;
+}

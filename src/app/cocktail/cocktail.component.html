@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="top">
+
+        <button routerLink="/dashboard/add-details">Add Details</button>
+
+    </div>
+    <div class="child" >
+       <div class="elements" *ngFor="let item of details">
+        <p>name:{{item.name}}</p>
+        <p> phone: {{item.phone}}</p>
+        <p>city: {{item.city}}</p>
+        <p>fee: {{item.fee}}</p>
+
+        <button>Edit</button>
+        <button (click)="delete(item.id)">Delete</button>
+       </div>
+    </div>
+</div>

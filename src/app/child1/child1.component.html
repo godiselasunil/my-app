@@ -1,0 +1,11 @@
+<div class="flex">
+
+    <label for="">Num1</label>
+    <input type="number" [(ngModel)]="num1">
+    <br>
+    <label for="">Num2</label>
+    <input type="number" [(ngModel)]="num2">
+    <br><br>
+
+    <app-c1 (bEvent)="catch($event)"></app-c1>
+</div>

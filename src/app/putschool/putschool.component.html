@@ -1,0 +1,27 @@
+<div class="main">
+    <div class="child">
+       
+        <form  [formGroup]="studentsForm">
+            <h1>Add the student details</h1>
+            <label for="">name</label>
+            <input type="text"formControlName="name"  required>
+            <br>
+            <label for="">Phone</label>
+            <input type="number" formControlName="phone">
+            <br>
+            <label for="">city</label>
+            <input type="text" formControlName="city">
+            <br>
+            <label for="">fee</label>
+            <input type="number" formControlName="fee">
+            <br>
+            <label for="">image</label>
+            <input type="text" formControlName="image">
+            <br>
+           <div class="button">
+            <button (click)="submit()" class="btn btn-warning">{{id?'Update':'Submit'}}</button>
+           </div>
+            
+        </form>
+    </div>
+</div>

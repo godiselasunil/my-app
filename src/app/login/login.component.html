@@ -1,15 +1,15 @@
 <div class="parent">
-    <div class="child">
+    <div class="child" [formGroup]="loginform">
        
         <label for="">Email:</label>
         <br>
-        <input type="text">
+        <input type="text" formControlName="email">
         <br>
         <label for="">Password:</label>
         <br>
-        <input type="text">
+        <input type="text" formControlName="password">
         <br>
-        <button routerLink="/dashboard/home">Login</button>
+        <button (click)="login()">Login</button>
        
 
     </div>
