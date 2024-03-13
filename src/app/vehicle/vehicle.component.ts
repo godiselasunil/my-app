@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { Router } from '@angular/router';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-vehicle',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class VehicleComponent {
 
-  public vehicles:any  = [];
+  public vehicles:Vehicle[]  = [];
 
   public term:string = "";
 
@@ -20,10 +21,10 @@ export class VehicleComponent {
 
   constructor(private _vehicleService:VehicleService,private _router:Router){
     _vehicleService.getVehicles().subscribe(
-      (data:any)=>{
+      (data:Vehicle[])=>{
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err:string)=>{
         alert("internal server error")
       }
     )
@@ -32,22 +33,22 @@ export class VehicleComponent {
 
   filter(){
     this._vehicleService.getFilterdVehicle(this.term).subscribe(
-      (data:any)=>{
+      (data:Vehicle[])=>{
 
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err:string)=>{
         alert("internal server error")
       }
     )
   }
   sort(){
     this._vehicleService.getSortedVehicle(this.column,this.order).subscribe(
-      (data:any)=>{
+      (data:Vehicle[])=>{
         this.vehicles = data;
 
       },
-      (data:any)=>{
+      (err:string)=>{
         alert("internal server error")
 
       }
@@ -57,11 +58,11 @@ export class VehicleComponent {
   pagenation(){
     this._vehicleService.getPageVehicle(this.page).subscribe(
 
-      (data:any)=>{
+      (data:Vehicle[])=>{
         this.vehicles = data;
 
       },
-      (data:any)=>{
+      (err:string)=>{
         alert("internal server error")
 
       }
@@ -69,12 +70,12 @@ export class VehicleComponent {
   }
   delete(id:string){
     this._vehicleService.deleteVehicle(id).subscribe(
-      (data:any)=>{
+      (data:Vehicle)=>{
         alert( data.Vehicle+"deleted successfully")
         location.reload();
 
       },
-      (data:any)=>{
+      (err:string)=>{
         alert("internal error")
       }
     )

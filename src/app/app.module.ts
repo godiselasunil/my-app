@@ -23,7 +23,7 @@ import { EventComponent } from './event/event.component';
 import { CarsComponent } from './cars/cars.component';
 import { ProductsComponent } from './products/products.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailsComponent } from './mails/mails.component';
@@ -52,6 +52,9 @@ import { C1Component } from './c1/c1.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { TodoAppModule } from './todo-app/todo-app.module';
 import { TodoappComponent } from './todo-app/todoapp/todoapp.component';
+import { BalencePipe } from './balence.pipe';
+import { ImpDirective } from './imp.directive';
+import { TokenInterceptor } from './token.interceptor';
 
 
 @NgModule({
@@ -101,6 +104,8 @@ import { TodoappComponent } from './todo-app/todoapp/todoapp.component';
     Child1Component,
     Child2Component,
     C1Component,
+    BalencePipe,
+    ImpDirective,
 
   ],
   imports: [
@@ -113,7 +118,13 @@ import { TodoappComponent } from './todo-app/todoapp/todoapp.component';
     TodoAppModule
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

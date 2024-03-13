@@ -39,10 +39,12 @@ import { SiblingsComponent } from './siblings/siblings.component';
 import { CalctaskComponent } from './calctask/calctask.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { TodoappComponent } from './todo-app/todoapp/todoapp.component';
+import { NotifyGuard } from './notify.guard';
+import { LogoutGuard } from './logout.guard';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
-  {path:'dashboard', canActivate:[AuthenticationGuard],    component: DashboardComponent,children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard] ,canDeactivate:[LogoutGuard],    component: DashboardComponent,children:[
     {path:'home', component:HomeComponent},
     {path:'about', component:AboutComponent},
     {path:'databinding', component:DataBindingComponent},
@@ -63,11 +65,11 @@ const routes: Routes = [
     {path:'activities',component:ActivitiesComponent},
     {path:'gallary',component:GallaryComponent},
     {path:'school',component:SchoolComponent},
-    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent, canDeactivate:[NotifyGuard]},
     {path:'putaccounts',component:PutaccountsComponent},
     {path:'putschool',component:PutschoolComponent},
     {path:'edit-school/:id',component:PutschoolComponent},
-    {path:'create-user',component:CreateUserComponent},
+    {path:'create-user',component:CreateUserComponent,canDeactivate:[NotifyGuard]},
     {path:'create-task',component:CreateTaskComponent},
     {path:'parent',component:ParentComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},

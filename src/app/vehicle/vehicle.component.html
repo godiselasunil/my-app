@@ -1,4 +1,4 @@
-
+  <h1 appImp>Vehicle Table</h1>
   <input type="text" [(ngModel)]="term" ((keyup))="filter()">
   <button (click)="filter()" class="btn btn-danger">Search</button>
 
@@ -14,7 +14,7 @@
   <button (click)="sort()">Sort</button>
   <label for="">select page</label>
 
-  <select name="" id="" [(ngModel)]="page" (change)="pagenation()" >
+  <select name="" id="" [(ngModel)]="page" (change)="pagenation()">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -44,8 +44,8 @@
         <tr *ngFor="let vehicle of vehicles">
             <td>{{vehicle.id}}</td>
             <td>{{vehicle.Vehicle}}</td>
-            <td>{{vehicle.manufacturer}}</td>
-            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.manufacture}}</td>
+            <td>{{vehicle.model | balence:'usa'}}</td>
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.color}}</td>
             <td><button btn class="btn btn-info" (click)="edit(vehicle.id)">Edit</button></td>

@@ -13,4 +13,7 @@ export class LoginService {
     return this._httpClient.post("https://reqres.in/api/login",data)
 
   }
+  getlogin():Observable<any>{
+    return this._httpClient.get("https://reqres.in/api/login")
+  }
 }
